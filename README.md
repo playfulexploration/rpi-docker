@@ -10,4 +10,4 @@ Docker setup and Dockerfiles for the Raspberry PI.
 | [rpi-grafana](rpi-grafana)   | Not started   | Starts influxdb as docker service.  Needs configuration for ease of use. |
 
 # Goal
-Create an extensible nginx configuration for docker based plug-in webservices.
+Create an extensible nginx configuration for docker based pluggable webservices.
