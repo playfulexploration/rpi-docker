@@ -20,6 +20,6 @@ Ensure the docker network exists.
 ```
 Start the container, use -d option to run it in the background.
 ```bash
- docker run -it --rm --name volumes -h volumes --net=nw playfulexploration/rpi-volumes
+ docker run -it --rm --name volumes -h volumes --net=nw --volumes-from nginx playfulexploration/rpi-volumes
 ```
 
