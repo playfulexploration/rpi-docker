@@ -18,7 +18,7 @@ Ensure the docker network exists.
 ```bash
  docker network create nw
 ```
-Start the container, use -d option to run it in the background.
+Start the container.  Use --rm option to self-destruct on exit.  Use the --volumes-from option to map the volumes of one or more target containers to manage.
 ```bash
  docker run -it --rm --name volumes -h volumes --net=nw --volumes-from nginx playfulexploration/rpi-volumes
 ```
