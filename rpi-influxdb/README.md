@@ -12,11 +12,11 @@ To get a docker image with influxdb version 0.13.0 running simply clone the repo
 
 Then run docker build:
 
-    docker build -t playfulexploration/rpi-influxdb rpi-influxdb-master/ && rm -rf rpi-influxdb-master
+    docker build -t playfulexploration/rpi-influxdb .
 
 Start your image binding the external ports `8083` and `8086` in all interfaces to your container. Ports `8090` and `8099` are only used for clustering and should not be exposed to the internet.
 
-    docker run --name influxdb -d -p 8083:8083 -p 8086:8086 -e PRE_CREATE_DB="db1" playfulexploration/rpi-influxdb
+    docker run -d --name influxdb -h influxdb -p 8083:8083 -p 8086:8086 -e PRE_CREATE_DB="db1" playfulexploration/rpi-influxdb
 
 Open your browse to access `localhost:8083` to configure InfluxDB. The default credential is `root:root`. Please change it as soon as possible.
 
